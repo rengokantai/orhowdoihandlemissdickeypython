@@ -14,6 +14,20 @@ get method
 ```
 dictname.get("key","fallback")
 ```
+
+###### 05:00
+```None``` sentinal.  
+Do not work if the value is `None`
+```
+def describe(category):
+  fav = favorites.get(category)
+  if fav is None:
+    message = "{} not exist".format(category)
+  else:
+    "{} is {}".format(category,fav)
+  print(message)
+```
+
 the final solution:
 ```
 def describe(category):
